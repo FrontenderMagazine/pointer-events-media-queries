@@ -1,6 +1,5 @@
-<article>
 We all know that there are a number of ways we can modify layout based on CSS
-media queries -- hell, we can even[animate properties between media queries][1]
+media queries -- hell, we can even [animate properties between media queries][1]
 `<a href="http://davidwalsh.name/pointer-events">pointer-events</a>`.
 Using the`pointer-events` property, we can also enable and disable some
 functionality with CSS based on media query state!
@@ -25,32 +24,29 @@ I paired the`pointer-events` property with the tablet media query:
 
     /* disable by default */
     #toc .heading {
-    	pointer-events: none;
+        pointer-events: none;
     }
     #toc i {
-    	display: none;
+        display: none;
     }
     
     /* enable for tablet! */
     @media only screen and (max-width: 760px) {
-    	#toc .heading {
-    		pointer-events: auto;
-    	}
-    	#toc i {
-    		display: block;
-    	}	
+        #toc .heading {
+            pointer-events: auto;
+        }
+        #toc i {
+            display: block;
+        }   
     }
     
-
 I absolutely adore `pointer-events` because it even prevents click events from
-firing, thus the JavaScript I use to trigger the[slide up/down][4] doesn't
+firing, thus the JavaScript I use to trigger the [slide up/down][4] doesn't
 occur. While I wouldn't say what I've done is overly clever, I would like to say
 that you should think about modifying more than just layout within different 
-media queries. Oh, and also,`pointer-events` is awesome!</article>
+media queries. Oh, and also,`pointer-events` is awesome!
 
-Tip: Wrap your code in <pre> tags or link to a GitHub Gist!
-
- [1]: http://davidwalsh.name/animate-media-queries
- [2]: img/mdn-redesign-desktop.jpg
- [3]: img/mdn-redesign-tablet.jpg
- [4]: http://davidwalsh.name/css-slide
+[1]: http://davidwalsh.name/animate-media-queries
+[2]: img/mdn-redesign-desktop.jpg "MDN Redesign Desktop"
+[3]: img/mdn-redesign-tablet.jpg "MDN Redesign Tablet"
+[4]: http://davidwalsh.name/css-slide
